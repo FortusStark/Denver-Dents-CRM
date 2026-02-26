@@ -39,9 +39,9 @@ def login():
         return render_template_string('''
             <!DOCTYPE html>
             <html>
-            <head><title>Login - Ace Auto CRM</title></head>
+            <head><title>Login - Denver Dents CRM</title></head>
             <body style="font-family: Arial; max-width: 400px; margin: 100px auto; padding: 20px;">
-                <h2 style="color: #dc3545;">❌ Incorrect Password</h2>
+                <h2 style="color: #dc3545;">‚ùå Incorrect Password</h2>
                 <p><a href="/login" style="color: #007bff;">Try again</a></p>
             </body>
             </html>
@@ -50,10 +50,10 @@ def login():
     return render_template_string('''
         <!DOCTYPE html>
         <html>
-        <head><title>Login - Ace Auto CRM</title></head>
+        <head><title>Login - Denver Dents CRM</title></head>
         <body style="font-family: Arial; max-width: 400px; margin: 100px auto; padding: 20px; background: #f5f5f5;">
             <div style="background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-                <h2 style="margin-bottom: 20px; color: #333;">🔒 Ace Auto CRM</h2>
+                <h2 style="margin-bottom: 20px; color: #333;">üîí Denver Dents CRM</h2>
                 <form method="post">
                     <input type="password" name="password" placeholder="Enter password" 
                            style="width: 100%; padding: 12px; margin: 10px 0; font-size: 16px; border: 1px solid #ddd; border-radius: 5px;" autofocus>
@@ -89,7 +89,7 @@ DASHBOARD_HTML = """
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ace Auto CRM v5</title>
+    <title>Denver Dents CRM v5</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -724,9 +724,9 @@ DASHBOARD_HTML = """
         </div>
         
         <div class="filters">
-            <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search customer, vehicle..." oninput="applyFilters()">
+            <input type="text" class="search-box" id="searchBox" placeholder="üîç Search customer, vehicle..." oninput="applyFilters()">
             <button class="filter-btn active" id="filterAll" onclick="setFilter('all')">All</button>
-            <button class="filter-btn" id="filterUrgent" onclick="setFilter('urgent')">🔴 Urgent</button>
+            <button class="filter-btn" id="filterUrgent" onclick="setFilter('urgent')">üî¥ Urgent</button>
             <button class="filter-btn" id="filterMine" onclick="setFilter('mine')">My Jobs</button>
             <select class="filter-btn" style="padding: 4px 8px;" id="assignFilter" onchange="applyFilters()">
                 <option value="">All People</option>
@@ -738,10 +738,10 @@ DASHBOARD_HTML = """
         </div>
         
         <div class="stats">
-            <div class="stat">📋 <span id="totalJobs">0</span> Jobs</div>
-            <div class="stat">💰 <span id="totalRevenue">$0</span> Revenue</div>
-            <div class="stat">⏳ <span id="inProgress">0</span> Active</div>
-            <div class="stat">🔴 <span id="urgentCount">0</span> Urgent</div>
+            <div class="stat">üìã <span id="totalJobs">0</span> Jobs</div>
+            <div class="stat">üí∞ <span id="totalRevenue">$0</span> Revenue</div>
+            <div class="stat">‚è≥ <span id="inProgress">0</span> Active</div>
+            <div class="stat">üî¥ <span id="urgentCount">0</span> Urgent</div>
         </div>
     </div>
 
@@ -822,9 +822,9 @@ DASHBOARD_HTML = """
             }
             
             if (job.stageData && job.stageData.arrived === true) {
-                badges.push('<span class="badge badge-arrived">✓ Arrived</span>');
+                badges.push('<span class="badge badge-arrived">‚úì Arrived</span>');
             } else if (job.stageData && job.stageData.arrived === false) {
-                badges.push('<span class="badge badge-not-arrived">⏳ Not Arrived</span>');
+                badges.push('<span class="badge badge-not-arrived">‚è≥ Not Arrived</span>');
             }
             
             if (job.stageData && job.stageData.partsOrdered) {
@@ -892,13 +892,13 @@ DASHBOARD_HTML = """
                 const result = await response.json();
                 
                 if (result.success) {
-                    showToast('✅ Moved to ' + targetStage);
+                    showToast('‚úÖ Moved to ' + targetStage);
                     loadData();
                 } else {
-                    showToast('❌ ' + result.message, true);
+                    showToast('‚ùå ' + result.message, true);
                 }
             } catch (err) {
-                showToast('❌ Error: ' + err.message, true);
+                showToast('‚ùå Error: ' + err.message, true);
             }
         }
         
@@ -916,7 +916,7 @@ DASHBOARD_HTML = """
                 <div class="left-column">
                     <!-- Main Info -->
                     <div class="profile-section">
-                        <div class="section-title">📋 Customer Information</div>
+                        <div class="section-title">üìã Customer Information</div>
                         <div class="form-group">
                             <label>RO Number</label>
                             <input type="text" value="${job.ro_number || '????'}" id="edit-ro" readonly style="background: #f0f0f0; font-weight: 700; color: #dc0000;">
@@ -958,24 +958,24 @@ DASHBOARD_HTML = """
                             <input type="number" value="${revenue}" id="edit-revenue">
                         </div>
                         
-                        <button class="btn btn-primary" onclick="saveJobDetails('${jobId}')" style="margin-right: 10px;">💾 Save Changes</button>
-                        <button class="btn btn-success" onclick="moveJobToNextStage('${jobId}')">➡️ Next Stage</button>
+                        <button class="btn btn-primary" onclick="saveJobDetails('${jobId}')" style="margin-right: 10px;">üíæ Save Changes</button>
+                        <button class="btn btn-success" onclick="moveJobToNextStage('${jobId}')">‚û°Ô∏è Next Stage</button>
                     </div>
                     
                     <!-- Documents Section -->
                     <div class="profile-section">
-                        <div class="section-title">📎 Attached Documents</div>
+                        <div class="section-title">üìé Attached Documents</div>
                         
                         <div class="document-category">
-                            <div class="category-header">📸 Photos (${documents.photos.length})</div>
+                            <div class="category-header">üì∏ Photos (${documents.photos.length})</div>
                             <div class="document-list">
                                 ${documents.photos.length === 0 ? '<div class="empty-state">No photos yet</div>' : 
                                   documents.photos.map(doc => `
                                     <div class="document-item">
-                                        <div class="doc-icon">📸</div>
+                                        <div class="doc-icon">üì∏</div>
                                         <div class="doc-info">
                                             <div class="doc-name">${doc.name}</div>
-                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} • ${doc.stage} • ${formatDate(doc.date)}</div>
+                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} ‚Ä¢ ${doc.stage} ‚Ä¢ ${formatDate(doc.date)}</div>
                                         </div>
                                         <div class="doc-actions">
                                             <button class="doc-btn">View</button>
@@ -986,15 +986,15 @@ DASHBOARD_HTML = """
                         </div>
                         
                         <div class="document-category">
-                            <div class="category-header">📄 Estimates (${documents.estimates.length})</div>
+                            <div class="category-header">üìÑ Estimates (${documents.estimates.length})</div>
                             <div class="document-list">
                                 ${documents.estimates.length === 0 ? '<div class="empty-state">No estimates yet</div>' : 
                                   documents.estimates.map(doc => `
                                     <div class="document-item">
-                                        <div class="doc-icon">📄</div>
+                                        <div class="doc-icon">üìÑ</div>
                                         <div class="doc-info">
                                             <div class="doc-name">${doc.name}</div>
-                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} • ${doc.stage} • ${formatDate(doc.date)}</div>
+                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} ‚Ä¢ ${doc.stage} ‚Ä¢ ${formatDate(doc.date)}</div>
                                         </div>
                                         <div class="doc-actions">
                                             <button class="doc-btn">View</button>
@@ -1005,15 +1005,15 @@ DASHBOARD_HTML = """
                         </div>
                         
                         <div class="document-category">
-                            <div class="category-header">📋 Invoices (${documents.invoices.length})</div>
+                            <div class="category-header">üìã Invoices (${documents.invoices.length})</div>
                             <div class="document-list">
                                 ${documents.invoices.length === 0 ? '<div class="empty-state">No invoices yet</div>' : 
                                   documents.invoices.map(doc => `
                                     <div class="document-item">
-                                        <div class="doc-icon">📋</div>
+                                        <div class="doc-icon">üìã</div>
                                         <div class="doc-info">
                                             <div class="doc-name">${doc.name}</div>
-                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} • ${doc.stage} • ${formatDate(doc.date)}</div>
+                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} ‚Ä¢ ${doc.stage} ‚Ä¢ ${formatDate(doc.date)}</div>
                                         </div>
                                         <div class="doc-actions">
                                             <button class="doc-btn">View</button>
@@ -1024,15 +1024,15 @@ DASHBOARD_HTML = """
                         </div>
                         
                         <div class="document-category">
-                            <div class="category-header">✅ Approvals (${documents.approvals.length})</div>
+                            <div class="category-header">‚úÖ Approvals (${documents.approvals.length})</div>
                             <div class="document-list">
                                 ${documents.approvals.length === 0 ? '<div class="empty-state">No approvals yet</div>' : 
                                   documents.approvals.map(doc => `
                                     <div class="document-item">
-                                        <div class="doc-icon">✅</div>
+                                        <div class="doc-icon">‚úÖ</div>
                                         <div class="doc-info">
                                             <div class="doc-name">${doc.name}</div>
-                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} • ${doc.stage} • ${formatDate(doc.date)}</div>
+                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} ‚Ä¢ ${doc.stage} ‚Ä¢ ${formatDate(doc.date)}</div>
                                         </div>
                                         <div class="doc-actions">
                                             <button class="doc-btn">View</button>
@@ -1043,15 +1043,15 @@ DASHBOARD_HTML = """
                         </div>
                         
                         <div class="document-category">
-                            <div class="category-header">📑 Supplements (${documents.supplements.length})</div>
+                            <div class="category-header">üìë Supplements (${documents.supplements.length})</div>
                             <div class="document-list">
                                 ${documents.supplements.length === 0 ? '<div class="empty-state">No supplements yet</div>' : 
                                   documents.supplements.map(doc => `
                                     <div class="document-item">
-                                        <div class="doc-icon">📑</div>
+                                        <div class="doc-icon">üìë</div>
                                         <div class="doc-info">
                                             <div class="doc-name">${doc.name}</div>
-                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} • ${doc.stage} • ${formatDate(doc.date)}</div>
+                                            <div class="doc-meta">Uploaded by ${doc.uploadedBy} ‚Ä¢ ${doc.stage} ‚Ä¢ ${formatDate(doc.date)}</div>
                                         </div>
                                         <div class="doc-actions">
                                             <button class="doc-btn">View</button>
@@ -1061,12 +1061,12 @@ DASHBOARD_HTML = """
                             </div>
                         </div>
                         
-                        <button class="upload-btn" onclick="uploadDocument('${jobId}')">📤 Upload Document</button>
+                        <button class="upload-btn" onclick="uploadDocument('${jobId}')">üì§ Upload Document</button>
                     </div>
                     
                     <!-- Timeline -->
                     <div class="profile-section">
-                        <div class="section-title">📊 Timeline</div>
+                        <div class="section-title">üìä Timeline</div>
                         <div class="timeline">
             `;
             
@@ -1095,20 +1095,20 @@ DASHBOARD_HTML = """
                     <!-- Correspondence Tabs -->
                     <div class="correspondence-tabs">
                         <div class="correspondence-tab insurance active" onclick="switchCorrTab('${jobId}', 'insurance')">
-                            📨 Insurance (${correspondence.insurance.length})
+                            üì® Insurance (${correspondence.insurance.length})
                         </div>
                         <div class="correspondence-tab team" onclick="switchCorrTab('${jobId}', 'team')">
-                            👥 Team (${correspondence.team.length})
+                            üë• Team (${correspondence.team.length})
                         </div>
                         <div class="correspondence-tab customer" onclick="switchCorrTab('${jobId}', 'customer')">
-                            💬 Customer (${correspondence.customer.length})
+                            üí¨ Customer (${correspondence.customer.length})
                         </div>
                     </div>
                     
                     <!-- Insurance Correspondence -->
                     <div class="correspondence-section insurance active" id="corr-insurance-${jobId}">
                         <div class="correspondence-header">
-                            <span>📨 Insurance Correspondence</span>
+                            <span>üì® Insurance Correspondence</span>
                             <button class="add-correspondence-btn" onclick="addCorrespondence('${jobId}', 'insurance')">+ Add</button>
                         </div>
                         <div class="correspondence-list" id="corr-list-insurance-${jobId}">
@@ -1129,7 +1129,7 @@ DASHBOARD_HTML = """
                     <!-- Team Correspondence -->
                     <div class="correspondence-section team" id="corr-team-${jobId}">
                         <div class="correspondence-header">
-                            <span>👥 Team Correspondence</span>
+                            <span>üë• Team Correspondence</span>
                             <button class="add-correspondence-btn" onclick="addCorrespondence('${jobId}', 'team')">+ Add</button>
                         </div>
                         <div class="correspondence-list" id="corr-list-team-${jobId}">
@@ -1150,7 +1150,7 @@ DASHBOARD_HTML = """
                     <!-- Customer Correspondence -->
                     <div class="correspondence-section customer" id="corr-customer-${jobId}">
                         <div class="correspondence-header">
-                            <span>💬 Customer Correspondence</span>
+                            <span>üí¨ Customer Correspondence</span>
                             <button class="add-correspondence-btn" onclick="addCorrespondence('${jobId}', 'customer')">+ Add</button>
                         </div>
                         <div class="correspondence-list" id="corr-list-customer-${jobId}">
@@ -1247,15 +1247,15 @@ DASHBOARD_HTML = """
                 const result = await response.json();
                 
                 if (result.success) {
-                    showToast('✅ Saved!');
+                    showToast('‚úÖ Saved!');
                     loadData();
                     // Re-open modal to show updates
                     setTimeout(() => openJobModal(jobId), 500);
                 } else {
-                    showToast('❌ ' + result.message, true);
+                    showToast('‚ùå ' + result.message, true);
                 }
             } catch (err) {
-                showToast('❌ Error: ' + err.message, true);
+                showToast('‚ùå Error: ' + err.message, true);
             }
         }
         
@@ -1280,7 +1280,7 @@ DASHBOARD_HTML = """
             if (!name) return;
             
             // In real implementation, this would handle file upload
-            showToast('📤 Document upload feature coming soon!');
+            showToast('üì§ Document upload feature coming soon!');
         }
         
         function addCorrespondence(jobId, type) {
@@ -1302,11 +1302,11 @@ DASHBOARD_HTML = """
             .then(r => r.json())
             .then(result => {
                 if (result.success) {
-                    showToast('✅ Added correspondence');
+                    showToast('‚úÖ Added correspondence');
                     loadData();
                     setTimeout(() => openJobModal(jobId), 500);
                 } else {
-                    showToast('❌ Error', true);
+                    showToast('‚ùå Error', true);
                 }
             });
         }
@@ -1402,9 +1402,9 @@ DASHBOARD_HTML = """
                             ${getJobBadges(job)}
                             ${days > 0 ? `<div class="days-badge">${days}d</div>` : ''}
                             <div class="job-customer">RO #${job.ro_number || '????'} - ${job.customerName}</div>
-                            ${job.assignedTo ? `<div class="job-assigned">👤 ${job.assignedTo}</div>` : ''}
-                            <div class="job-vehicle">🚗 ${job.vehicle}</div>
-                            ${revenue > 0 ? `<div class="job-money">💰 ${formatMoney(revenue)}</div>` : ''}
+                            ${job.assignedTo ? `<div class="job-assigned">üë§ ${job.assignedTo}</div>` : ''}
+                            <div class="job-vehicle">üöó ${job.vehicle}</div>
+                            ${revenue > 0 ? `<div class="job-money">üí∞ ${formatMoney(revenue)}</div>` : ''}
                         `;
                         
                         container.appendChild(card);
@@ -1572,20 +1572,20 @@ def add_correspondence(job_id):
 
 if __name__ == '__main__':
     print("\n" + "="*70)
-    print("🚗 ACE AUTO HAIL REPAIR - CRM v5 with Customer Profiles")
+    print("üöó ACE AUTO HAIL REPAIR - CRM v5 with Customer Profiles")
     print("="*70)
-    print("\n✨ NEW FEATURE: Complete Customer Profiles!")
-    print("\n📋 Left Column:")
-    print("  • Customer information (editable)")
-    print("  • Attached documents by category")
+    print("\n‚ú® NEW FEATURE: Complete Customer Profiles!")
+    print("\nüìã Left Column:")
+    print("  ‚Ä¢ Customer information (editable)")
+    print("  ‚Ä¢ Attached documents by category")
     print("    - Photos, Estimates, Invoices")
     print("    - Approvals, Supplements, Other")
-    print("  • Timeline view")
-    print("\n💬 Right Column:")
-    print("  • Insurance correspondence")
-    print("  • Team correspondence")
-    print("  • Customer correspondence")
-    print("\n📱 Access:")
+    print("  ‚Ä¢ Timeline view")
+    print("\nüí¨ Right Column:")
+    print("  ‚Ä¢ Insurance correspondence")
+    print("  ‚Ä¢ Team correspondence")
+    print("  ‚Ä¢ Customer correspondence")
+    print("\nüì± Access:")
     print("  http://localhost:5000")
     print("\n" + "="*70 + "\n")
     
