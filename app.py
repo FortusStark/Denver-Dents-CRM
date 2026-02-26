@@ -716,8 +716,8 @@ DASHBOARD_HTML = """
     <div class="header">
         <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 10px;">
             <div style="font-family: 'Arial Black', sans-serif;">
-                <div style="font-size: 2em; font-weight: 900; color: #000; line-height: 0.9; letter-spacing: -1px;">ACE</div>
-                <div style="font-size: 0.7em; font-weight: 700; color: #dc0000; letter-spacing: 2px;">AUTO HAIL REPAIR</div>
+                <div style="font-size: 2em; font-weight: 900; color: #000; line-height: 0.9; letter-spacing: -1px;">DENVER DENTS</div>
+                <div style="font-size: 0.7em; font-weight: 700; color: #dc0000; letter-spacing: 2px;"></div>
             </div>
             <div style="border-left: 2px solid #ddd; height: 40px;"></div>
             <h1 style="margin: 0; font-size: 1.3em; color: #dc0000;">CRM Dashboard</h1>
@@ -1572,7 +1572,7 @@ def add_correspondence(job_id):
 
 if __name__ == '__main__':
     print("\n" + "="*70)
-    print("üöó ACE AUTO HAIL REPAIR - CRM v5 with Customer Profiles")
+    print("üöó DENVER DENTS  - CRM v5 with Customer Profiles")
     print("="*70)
     print("\n‚ú® NEW FEATURE: Complete Customer Profiles!")
     print("\nüìã Left Column:")
