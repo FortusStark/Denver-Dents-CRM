@@ -1,0 +1,61 @@
+{
+  "jobs": [],
+  "stages": [
+    "Lead",
+    "Scheduled",
+    "Estimated & Submitted",
+    "Needs Submission",
+    "Approved - Not Arrived",
+    "Approved - Arrived",
+    "Order Parts",
+    "R&I Started",
+    "PDR",
+    "Body Shop",
+    "Paint",
+    "QC #1 - Pre-Reassembly",
+    "Reassembly",
+    "Detail",
+    "Payment",
+    "Pickup Scheduled",
+    "Completed"
+  ],
+  "insuranceCompanies": [
+    "State Farm",
+    "Geico",
+    "Progressive",
+    "Farmers",
+    "Liberty Mutual",
+    "USAA",
+    "Nationwide",
+    "Allstate",
+    "American Family",
+    "Other"
+  ],
+  "company": {
+    "name": "Denver Dents",
+    "website": "https://www.denverdents.com/",
+    "phone": "(574) 904-6900",
+    "email": "abbey@denverdents.com"
+  },
+  "team": [
+    {
+      "id": "lane_owner",
+      "name": "Lane",
+      "role": "Owner",
+      "phone": "(574) 904-6900",
+      "email": "",
+      "accessLevel": "admin"
+    },
+    {
+      "id": "abby_production",
+      "name": "Abbey (Abby) Hiett",
+      "role": "Production Manager",
+      "phone": "(720) 775-5817",
+      "email": "abbey@denverdents.com",
+      "accessLevel": "admin",
+      "notes": "Handles estimates, production management, has paint booth"
+    }
+  ],
+  "lastUpdated": "2026-02-25T18:45:00-07:00",
+  "nextRONumber": 1
+}
